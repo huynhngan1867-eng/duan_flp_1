@@ -56,38 +56,36 @@ nav {
 /* ========== HEADER — Mobile ========== */
 @media (max-width: 600px) {
   .thanh_header {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "logo  basket"
-      "nav   nav";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     padding-top: 3.5vw;
     padding-bottom: 3vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    row-gap: 2.5vw;
+    gap: 2vw 5.5vw;
   }
 
   .logo1 {
-    grid-area: logo;
-    font-size: 7.5vw;
-    justify-self: start;
-    align-self: center;
-  }
-
-  .nutgiohang {
-    grid-area: basket;
-    font-size: 4vw;
-    justify-self: end;
-    align-self: center;
+    width: 100%;
+    text-align: center;
+    font-size: 8vw;
+    order: 1;
   }
 
   nav {
-    grid-area: nav;
-    justify-self: center;
-    gap: 7vw;
+    display: contents;
+    order: 2;
+  }
+
+  .head {
+    order: 2;
     font-size: 3.8vw;
+  }
+
+  .nutgiohang {
+    order: 2;
+    font-size: 3.8vw;
+    font-family: "Montserrat", sans-serif;
   }
 }
 
